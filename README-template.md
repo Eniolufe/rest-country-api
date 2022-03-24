@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/Eniolufe/rest-country-api.git)
-- Live Site URL: [Add live site URL here](luxury-souffle-2088b7.netlify.app)
+- Live Site URL: [Add live site URL here](https://luxury-souffle-2088b7.netlify.app)
 
 ## My process
 
