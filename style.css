@@ -1,0 +1,232 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-Blue: hsl(209, 23%, 22%);
+  --Very-Dark-Blue: hsl(207, 26%, 17%);
+  --Very-Dark-Blue: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --background-el: hsl(0, 0%, 100%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  font-family: "Nunito Sans" sans-serif;
+}
+body.dark {
+  background-color: var(--Very-Dark-Blue);
+  --background-el: hsl(207, 26%, 17%);
+  color: var(--Very-Light-Gray);
+}
+.container {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container:nth-child(1) {
+  background-color: var(--background-el);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+button {
+  outline: none;
+  border: 0;
+}
+
+.toggle-btn {
+  background-color: var(--background-el);
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+}
+.toggle-btn i {
+  padding-right: 5px;
+}
+
+.form-control {
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.form-control input {
+  background-color: var(--background-el);
+  width: 100%;
+  padding: 17px 14px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: inherit;
+}
+
+.form-control i {
+  background-color: var(--background-el);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  width: 200px;
+  position: relative;
+}
+.dropdown {
+  background-color: var(--background-el);
+  width: 100%;
+  padding: 17px 14px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdown p {
+  letter-spacing: 0.5px;
+}
+.drop-region {
+  width: 100%;
+  position: absolute;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  top: 4rem;
+  padding: 10px 14px;
+  background-color: var(--background-el);
+  display: none;
+  cursor: pointer;
+}
+
+.drop-region p {
+  margin: 5px 0;
+}
+
+.country-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+}
+.country {
+  min-height: 400px;
+  width: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.country img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.country-details {
+  padding: 30px;
+  margin-top: 0;
+  background-color: var(--background-el);
+}
+.country-details h3 {
+  padding: 10px 0;
+  margin-top: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.country-details p {
+  letter-spacing: 1px;
+}
+.country-details p > strong {
+  font-weight: 600;
+}
+.showDrop {
+  display: block;
+}
+
+.country-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Very-Light-Gray);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  cursor: pointer;
+}
+.back {
+  position: absolute;
+  top: 3rem;
+  left: 30px;
+  background-color: var(--background-el);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.left-modal {
+  width: 45%;
+}
+.left-modal > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right-modal {
+  width: 55%;
+  margin-left: 20px;
+}
+.right-modal h3 {
+  margin: 10px 120px;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.modal-details {
+  display: flex;
+  justify-content: center;
+}
+
+.inner p {
+  letter-spacing: 1px;
+}
+.inner p > strong {
+  font-weight: 600;
+}
+.show {
+  display: none;
+}
+.borders {
+  position: relative;
+  top: 1.5rem;
+  left: 30px;
+  background-color: var(--background-el);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
